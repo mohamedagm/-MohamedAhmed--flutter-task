@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_flutter_task/views/offers_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
         return Directionality(textDirection: TextDirection.rtl, child: child!);
       },
       theme: ThemeData(textTheme: GoogleFonts.tajawalTextTheme()),
-      home: Scaffold(body: Center(child: Text('يا الف مرحب'))),
+      home: OffersView(),
     );
   }
 }
