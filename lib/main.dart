@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +10,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      builder: (context, child) {
+        return Directionality(textDirection: TextDirection.rtl, child: child!);
+      },
+      theme: ThemeData(textTheme: GoogleFonts.tajawalTextTheme()),
+      home: Scaffold(body: Center(child: Text('يا الف مرحب'))),
     );
   }
 }
